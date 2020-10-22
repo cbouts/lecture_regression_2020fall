@@ -25,11 +25,12 @@ print(data)
 # need to use a construtor to make a model. the constructor is LinearRegression() which is like BeautifulSoup in that it is a constructor.
 
 
-machine = linear_model.LinearRegression()
+# machine = linear_model.LinearRegression()
+machine = linear_model.LogisticRegression()
 machine.fit(data, target)
 # this is fitting it. this line is there for pretty much every one of these programs in sklearn.
 # print(machine)
-# with this, it prints out LinearRegression() bc it's just telling us what kind of reg it is
+# 
 # the machine has already learned about the data now that we'ver run this.
 
 # now we have a new person. we want the machine to predict the y.
@@ -43,16 +44,8 @@ new_data = [
 # the 2 [[]]s is because the new data needs to have the same format as the data that's already in the dataframe.
 results = machine.predict(new_data)
 print(results)
-# the program will output a prediction for the new guy.
-# machine takes into account all the data in order to learn about the relationship between the xs and the target.
-# the educated guess may not necessarily be the same as an observation with otherwise identical data within the dataset
-# the intelligence is that it actually has a concept of the relationship between x and y
-# after you fit it, you conjure something new. 
-# 
-
-# the code in the last new guy gives a probability prediction that is greater than 1. this is a problem for linear probability model.
-# so need to change our setup 
-
-
+# with logistic regression, it doesn't give you probabilities. it gives you predictions of discretely whether or not something is true. so this makes a lot of sense to use in many cases.
+# this is why we use LOGISTIC REGRESSIONS IN BINARY SITUATIONS!!!!!
+# we can't know whether or not our model is working well/if our prediction is correct.
 
 
