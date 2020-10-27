@@ -36,6 +36,17 @@ for training_index, test_index in kfold_object.split(data):
 	results = machine.predict(data_test)
 	print(metrics.accuracy_score(target_test, results))
 		# accuracy score is for category variables
-		# r2 is for continuous variables.
+		# r2 is for continuous variables.-- print(metrics.r2_score(target_test, results))
 	print(metrics.confusion_matrix(target_test, results))
-	# print(metrics.r2_score(target_test, results))
+		# give you array of array. it's 5x5. if your model has 5 different outcome variables y, you have a 5x5 matrix
+		# test case is on the vertical, what the model says is on the y axis.
+		# it gives you the amount of times the model says the thing on the horiszontal axis when the test case says the thing on the vertical axis
+
+
+
+
+
+
+
+
+

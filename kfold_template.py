@@ -28,7 +28,7 @@ def run_kfold(split_number,data,target,machine):
 	# # but if we do this, we can't import it.
 	 # so we put it in a thing like this:
 
-if __name__=='__main__' 
+# if __name__=='__main__' 
 
 		# print(metrics.accuracy_score(target_test, results))
 		# # accuracy score is for category variables
