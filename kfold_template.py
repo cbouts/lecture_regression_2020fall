@@ -20,9 +20,15 @@ def run_kfold(split_number,data,target,machine):
 		target_training, target_test = target[training_index], target[test_index]
 		machine.fit(data_training, target_training)
 		results = machine.predict(data_test)
-		results_accuracy.append(metrics.accuracy_score(target_test))
-		results_confusion.append(metrics.accuracy_score(target_test))
+		results_accuracy.append(metrics.accuracy_score(target_test, results))
+		results_confusion.append(metrics.accuracy_score(target_test, results))
 	return results_accuracy, results_confusion
+
+	# run_kfold()
+	# # but if we do this, we can't import it.
+	 # so we put it in a thing like this:
+
+if __name__=='__main__' 
 
 		# print(metrics.accuracy_score(target_test, results))
 		# # accuracy score is for category variables
